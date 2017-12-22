@@ -1,11 +1,12 @@
 name: discord
 version: latest
 version-script: cat $SNAPCRAFT_STAGE/version
-summary: Free voice and text chat
+summary: Free voice and text chat - public test build
 description: |
  All-in-one voice and text chat for gamers that's free, secure, and
  works on both your desktop and phone. Stop paying for TeamSpeak
  servers and hassling with Skype. Simplify your life.
+ Note: This is the public test build of discord.
 
 grade: stable
 confinement: strict
@@ -13,12 +14,12 @@ confinement: strict
 parts:
   discord:
     install: |
-      DEB_API="https://discordapp.com/api/download?platform=linux&format=deb"
+      DEB_API="https://discordapp.com/api/download/ptb?platform=linux&format=deb"
       DEB_URL=$(curl -w "%{url_effective}\n" -I -L -s -S "${DEB_API}" -o /dev/null)
       VERSION=$(echo "${DEB_URL}" | cut -d'/' -f6)
       echo $VERSION > $SNAPCRAFT_STAGE/version
     plugin: dump
-    source: "https://discordapp.com/api/download?platform=linux&format=deb"
+    source: "https://discordapp.com/api/download/ptb?platform=linux&format=deb"
     source-type: deb
     # Correct path to icon.
     prepare: |
