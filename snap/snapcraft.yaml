@@ -7,7 +7,6 @@ description: |
  works on both your desktop and phone. Stop paying for TeamSpeak
  servers and hassling with Skype. Simplify your life.
  Note: This is the public test build of discord.
-
 grade: stable
 confinement: strict
 
@@ -23,7 +22,7 @@ parts:
     source-type: deb
     # Correct path to icon.
     prepare: |
-      sed -i 's|Icon=discord|Icon=/usr/share/discord/discord\.png|' usr/share/discord/discord.desktop
+      sed -i 's|Icon=discord-ptb|Icon=/usr/share/discord-ptb/discord\.png|' usr/share/discord-ptb/discord-ptb.desktop
     after:
       - desktop-gtk2
     build-packages:
@@ -42,8 +41,8 @@ parts:
 
 apps:
   discord:
-    command: bin/desktop-launch $SNAP/usr/share/discord/Discord
-    desktop: usr/share/applications/discord.desktop
+    command: bin/desktop-launch $SNAP/usr/share/discord-ptb/DiscordPTB
+    desktop: usr/share/applications/discord-ptb.desktop
     # Correct the TMPDIR path for Chromium Framework/Electron to
     # ensure libappindicator has readable resources.
     environment:
