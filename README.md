@@ -1,25 +1,25 @@
 <h1 align="center">
-  <img src="https://discordapp.com/assets/2c21aeda16de354ba5334551a883b481.png" alt="Discord">
+  <img src="https://discordapp.com/assets/2c21aeda16de354ba5334551a883b481.png" alt="Discord PTB">
   <br />
-  Discord
+  Discord PTB
 </h1>
 
-<p align="center"><b>This is the snap for Discord</b>, <i>"an all-in-one voice
+<p align="center"><b>This is the snap for Discord PTB</b>, <i>"an all-in-one voice
 and text chat for gamers that's free, secure, and works on both your desktop
 and phone"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 <p align="center">
-<a href="https://build.snapcraft.io/user/snapcrafters/discord"><img src="https://build.snapcraft.io/badge/snapcrafters/discord.svg" alt="Snap Status"></a>
+<a href="https://build.snapcraft.io/user/snapcrafters/discord-ptb"><img src="https://build.snapcraft.io/badge/snapcrafters/discord.svg" alt="Snap Status"></a>
 </p>
 
 ## Install
 
-    sudo snap install discord
-    sudo snap connect discord:camera core:camera
-    sudo snap connect discord:mount-observe core:mount-observe
-    sudo snap connect discord:network-observe core:network-observe
-    sudo snap connect discord:process-control core:process-control
-    sudo snap connect discord:system-observe core:system-observe
+    sudo snap install discord-ptb
+    sudo snap connect discord-ptb:camera core:camera
+    sudo snap connect discord-ptb:mount-observe core:mount-observe
+    sudo snap connect discord-ptb:network-observe core:network-observe
+    sudo snap connect discord-ptb:process-control core:process-control
+    sudo snap connect discord-ptb:system-observe core:system-observe
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
