@@ -23,7 +23,7 @@ parts:
       VERSION=$(echo "${DEB_URL}" | cut -d'/' -f6)
       echo $VERSION > $SNAPCRAFT_STAGE/version
       # Correct path to icon.
-      sed -i 's|Icon=discord-ptb|Icon=/usr/share/discord-ptb/discord\.png|' usr/share/discord-ptb/discord-ptb.desktop
+      sed -i 's|Icon=discord-ptb|Icon=/usr/share/discord-ptb/discord\.png|'  ${SNAPCRAFT_PART_INSTALL}/usr/share/discord-ptb/discord-ptb.desktop
     after:
       - desktop-gtk2
     build-packages:
